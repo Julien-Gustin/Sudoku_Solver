@@ -21,54 +21,13 @@ class Grid:
     def getBox(self, i, j):
         ret = []
         j = Alphabet.index(j)
-        if i < 3:
-            if j < 3:
-                for k in range(0, 3):
-                    for l in range(0, 3):
-                        ret.append(self.grid[k][l])
 
+        i0 = (i//3)*3
+        j0 = (j//3)*3
 
-            elif j >= 3 and j < 6:
-                for k in range(0, 3):
-                    for l in range(3, 6):
-                        ret.append(self.grid[k][l])
-
-            elif j >= 6:
-                for k in range(0, 3):
-                    for l in range(6, 9):
-                        ret.append(self.grid[k][l])
-
-        elif i >= 3 and i < 6:
-            if j < 3:
-                for k in range(3, 6):
-                    for l in range(0, 3):
-                        ret.append(self.grid[k][l])
-
-            elif j >= 3 and j < 6:
-                for k in range(3, 6):
-                    for l in range(3, 6):
-                        ret.append(self.grid[k][l])
-
-            elif j >= 6:
-                for k in range(3, 6):
-                    for l in range(6, 9):
-                        ret.append(self.grid[k][l])
-
-        elif i >= 6:
-            if j < 3:
-                for k in range(6, 9):
-                    for l in range(0, 3):
-                        ret.append(self.grid[k][l])
-
-            elif j >= 3 and j < 6:
-                for k in range(6, 9):
-                    for l in range(3, 6):
-                        ret.append(self.grid[k][l])
-
-            elif j >= 6:
-                for k in range(6, 9):
-                    for l in range(6, 9):
-                        ret.append(self.grid[k][l])
+        for k in range(0, 3):
+            for l in range(0, 3):
+                ret.append(self.grid[i0+k][j0+l])
 
         return ret
 
