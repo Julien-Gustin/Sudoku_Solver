@@ -90,8 +90,10 @@ def inference(csp, var, assignment):
     line = var.line
     column = var.column
     val = assignment[line, column]
+    del assignment[line, column]
 
-    inferences = (csp.removeAt, line, column)
+    inferences = lambda : csp.removeAt(line, column)
+    # inferences = (csp.removeAt, line, column)
     ass = csp.setAt(line, column, val)
 
     if ass is not False:
@@ -138,7 +140,7 @@ def backtrack(assignment, csp):
                 return result
 
         inf = assignment["inference"].pop()
-        ass = inf[0](inf[1], inf[2])
+        ass = inf()
         updateAssignment(assignment, ass)
 
     return False
