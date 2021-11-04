@@ -1,5 +1,4 @@
-# A *simple* sudoku solver using
-## Backtracking and forward checking algorithm
+# A *simple* sudoku solver using Backtracking and forward checking algorithm
 
 ### Utilisation
 ```sh
