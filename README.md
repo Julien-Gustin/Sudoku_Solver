@@ -1,4 +1,4 @@
-# A sudoku solver by using
+# A *simple* sudoku solver using
 ## Backtracking and forward checking algorithm
 
 ### Utilisation
