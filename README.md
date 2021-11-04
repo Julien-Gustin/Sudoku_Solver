@@ -8,6 +8,3 @@
 ### Using your sample
 
 Go to "/Sample" and add your sudoku in a matrix from in json format
-
-### TODO:
-Apprendre à parler anglais avant de documenter 
